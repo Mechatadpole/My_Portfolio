@@ -21,3 +21,49 @@
   transition: all ease 0.3s;
 }
 
+.download_btn {
+    display: block;
+    background: #fec608;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 20px;
+    color: #222222;
+    font-size: 18px;
+    font-family: "Yellowtail", cursive;
+    position: relative;
+    overflow: hidden;
+  }
+  
+.download_btn span {
+    display: inline-block;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    height: 100%;
+    transition: all 400ms linear 0s;
+  }
+  
+.download_btn:before {
+    content: "\f019";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    color: #222222;
+    top: -100%;
+    left: 0px;
+    font-family: FontAwesome;
+    transition: all 200ms ease-in;
+  }
+  
+.download_btn:hover span {
+    -webkit-transform: translateY(300%);
+    -ms-transform: translateY(300%);
+    transform: translateY(300%);
+  }
+  
+.download_btn:hover:before {
+    top: 0px;
+  }
