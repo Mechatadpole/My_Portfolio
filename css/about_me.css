@@ -17,6 +17,19 @@
 #aboutMeInfo{
   position: relative;
   width: 100%;
+  height: 800px;
+  color: black;
+
+}
+
+#aboutMe{
   height: 100%;
-  z-index: 9999;
+  width: 100%;
+  color: black;
+}
+
+#aboutMeAbout{
+  height: 100%;
+  width: 100%;
+  color: black;
 }

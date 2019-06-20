@@ -80,16 +80,9 @@
     <section id="aboutme">
         <div id="container">
             <div id="button" onclick="generate();">
-                <div id="aboutMeInfo">
-                    <h1>ABOUT ME</h1>
-                    <img src="./assets/pjimage.jpg" alt="" style="height: 300px; width: 300px;">
-                    <p>My name is Owen Edwards and I am an aspiring video game designer. I have a passion for working on
-                        projects that involve both front-end and back-end development</p>
-                    <button class="download_btn" style="text-align: center;"
-                        href="https://docs.google.com/document/d/1Yls1oxY-UAqNIHMyC7b8efqQdDF8UaEOiSt30xBwBPA/edit?usp=sharing"
-                        target="_blank">Open Resume</button>
-                </div>
-                <section>
+
+                <section id="aboutMeAbout">
+
                     <style type="text/css">
                         html,
                         body {
@@ -103,7 +96,7 @@
                         }
 
                         #outer {
-                            position: absolute;
+                            /* position: absolute; */
                             top: 60%;
                             left: 50%;
                             width: 1px;
@@ -112,7 +105,7 @@
                         }
 
                         #canvasContainer {
-                            position: absolute;
+                            /* position: absolute; */
                             width: 100%;
                             height: 100%;
                             top: -450px;
@@ -152,12 +145,13 @@
                             }
                         })();
                     </script>
-
                     <div id="outer">
                         <div id="canvasContainer">
                             <canvas id="mainCanvas" width="1000" height="560"></canvas>
                         </div>
                     </div>
+
+
                 </section>
 
 
@@ -185,6 +179,7 @@
                 <a href="https://codesandbox.io/s/calculator-app-nfqbo">
                     <img class="jsprojects" src="./assets/calculator.PNG" alt="">
                 </a>
+
                 <a href="https://codesandbox.io/s/sign-up-page-ksirt">
                     <img class="jsprojects" src="./assets/signup.PNG" alt="">
                 </a>
@@ -213,6 +208,17 @@
                 <a href="https://codesandbox.io/s/object-checker-pgxdq">
                     <img class="jsprojects" src="./assets/objchecker.PNG" alt="">
                 </a>
+                <div id="aboutMeInfo" style="border: 5px solid red; z-index: 999px;">
+                    <h1 style="z-index: 999;">ABOUT ME</h1>
+                    <img src="./assets/pjimage.jpg" alt="" style="height: 300px; width: 300px; z-index: 999;">
+                    <p style="z-index: 999;">My name is Owen Edwards and I am an aspiring video game designer. I
+                        have a passion for
+                        working on
+                        projects that involve both front-end and back-end development</p>
+                    <button class="download_btn" style="z-index: 999; text-align: center;"
+                        href="https://docs.google.com/document/d/1Yls1oxY-UAqNIHMyC7b8efqQdDF8UaEOiSt30xBwBPA/edit?usp=sharing"
+                        target="_blank">Open Resume</button>
+                </div>
             </div>
 
         </div>
