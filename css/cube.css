@@ -1,0 +1,178 @@
+.inputField{
+  float: left;
+  width: 100%;
+}
+
+.messageField{
+  height: 6em;
+}
+
+.modal-body{
+    background-color: rebeccapurple;
+    text-align: center;
+    height: 300px;
+}
+
+.modal-title {
+    color: rgb(0, 0, 0);
+}
+
+.jsprojects{
+  height: 300px;
+  
+}
+
+/* 
+CSS SECTIONS
+CUBE ONE 
+*/
+#experiment {
+background-color: #ffffff;
+}
+#cube {
+  position: relative;
+  /* margin: 100px auto; */
+  height: 800px;
+  width: 100%;
+  transition: transform 2s linear;
+  transform-style: preserve-3d;
+}
+.face {
+  position: absolute;
+  height: 800px;
+  width: 800px;
+  backface-visibility: hidden;
+  /* padding: 20px; */
+  background-color: rgb(81, 255, 0);
+  font-size: 20px;
+  line-height: 1em;
+  color: #fff;
+  transform-style: preserve-3d;
+}
+/* First Cube Animation of spin */
+#cube .two {
+  transform: translateZ(400px);
+}
+#cube .three {
+  transform: rotateY(90deg) translateZ(400px);
+}
+#cube .four {
+  transform: rotateY(180deg) translateZ(400px);
+}
+#cube .five {
+  transform: rotateY(-90deg) translateZ(400px);
+}
+/* 
+CSS SECTIONS 
+CUBE TWO
+*/
+#experiment2 {
+background-color: #ffffff;
+}
+#cube2 {
+  position: relative;
+  /* margin: 100px auto; */
+  height: 800px;
+  width: 800px;
+  transition: transform 2s linear;
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 2s linear;
+  -webkit-transform-style: preserve-3d;
+}
+.face2 {
+  position: absolute;
+  height: 800px;
+  width: 800px;
+  background-color: blue;
+  font-size: 20px;
+  line-height: 1em;
+  color: #fff;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+/* Second Cube Animation of spin */
+#cube2 .one2  {
+  transform: rotateX(90deg) translateZ(400px);
+}
+#cube2 .two2 {
+  transform: translateZ(400px);
+}
+#cube2 .four2 {
+  transform: rotateY(180deg) rotate(180deg)translateZ(400px);
+}
+#cube2 .six2 {
+  transform: rotateX(-90deg) translateZ(400px);
+}
+
+
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+
+.waveWrapper {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+    background-image: linear-gradient(to top, #b946ae 20%, #34c25e 80%);
+}
+.bgTop {
+    z-index: 15;
+    opacity: 0.5;
+}
+.bgMiddle {
+    z-index: 10;
+    opacity: 0.75;
+}
+.bgBottom {
+    z-index: 5;
+}
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+.waveTop {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+   -webkit-animation: move-wave 3s;
+   -webkit-animation-delay: 1s;
+   animation-delay: 1s;
+}
+.waveMiddle {
+    background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+}
+

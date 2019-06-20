@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="html5,particles,canvas" />
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cube Testing zone</title>
+    <script src="lib/jquery/jquery-1.8.2.min.js"></script>
+
+    <link rel="stylesheet" href="./css/cube.css" type="text/css">
+    <link rel="stylesheet" href="./css/projects.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand mx-auto" href="#">Owen Edwards</a>
+        </div>
+    </nav>
+    <ul class="nav nav-pills nav-fill justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item dropdown justify-content-center">
+            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" role="button" aria-haspopup="true"
+                aria-expanded="false" href="#" style="color: white;">My 1150 Projects</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item text-center" href="#">JavaScript</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item text-center" href="#">Python</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#myModal" data-toggle="modal" data-target="#myModal">Contact Me</a>
+        </li>
+    </ul>
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Contact me through the following</h5>
+                </div>
+                <div class="modal-body">
+                    <form action="https://formspree.io/omedwards@outlook.com" method="POST">
+                        <input class="inputField" type="text" name="name" placeholder="Name">
+                        <br>
+                        <br>
+                        <input class="inputField" type="email" name="_replyto" placeholder="email@example.com">
+                        <br>
+                        <br>
+                        <input class="inputField messageField" type="content" name="content"
+                            placeholder="Leave me a message">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <input type="submit" value="Send">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- About Me -->
+    <section id="aboutme">
+        <div id="container">
+            <div id="button" onclick="generate();">
+                <section>
+                    <style type="text/css">
+                        html,
+                        body {
+                            text-align: center;
+
+                            margin: 0;
+                            padding: 0;
+                            background: #000000;
+                            color: #666666;
+                            line-height: 1.25em;
+                        }
+
+                        #outer {
+                            position: absolute;
+                            top: 60%;
+                            left: 50%;
+                            width: 1px;
+                            height: 1px;
+                            overflow: visible;
+                        }
+
+                        #canvasContainer {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            top: -450px;
+                            left: -500px;
+                        }
+
+                        canvas {
+                            border: 1px solid #333333;
+                        }
+
+                        a {
+                            color: #00CBCB;
+                            text-decoration: none;
+                            font-weight: bold;
+                        }
+
+                        a:hover {
+                            color: rgb(255, 255, 255);
+                        }
+                    </style>
+
+                    <script type="text/javascript">
+                        (function () {
+                            function C() {
+                                e.globalCompositeOperation = "source-over"; e.fillStyle = "rgba(8,8,12,0.65)"; e.fillRect(0, 0, f, p); e.globalCompositeOperation = "lighter"; x = q - u; y = r - v; u = q; v = r; for (var d = 0.86 * f, l = 0.125 * f, m = 0.5 * f, t = Math.random, n = Math.abs, o = z; o--;) {
+                                    var h = A[o], i = h.x, j = h.y, a = h.a, b = h.b, c = i - q, k = j - r, g = Math.sqrt(c * c + k * k) || 0.001, c = c / g, k = k / g; if (w && g < m) var s = 14 * (1 - g / m), a = a + (c * s + 0.5 - t()), b = b + (k * s + 0.5 - t()); g < d && (s = 0.0014 * (1 - g / d) * f, a -= c * s, b -= k * s); g < l && (c = 2.6E-4 * (1 - g / l) * f, a += x * c, b += y * c); a *= B; b *= B; c = n(a); k = n(b); g =
+                                        0.5 * (c + k); 0.1 > c && (a *= 3 * t()); 0.1 > k && (b *= 3 * t()); c = 0.45 * g; c = Math.max(Math.min(c, 3.5), 0.4); i += a; j += b; i > f ? (i = f, a *= -1) : 0 > i && (i = 0, a *= -1); j > p ? (j = p, b *= -1) : 0 > j && (j = 0, b *= -1); h.a = a; h.b = b; h.x = i; h.y = j; e.fillStyle = h.color; e.beginPath(); e.arc(i, j, c, 0, D, !0); e.closePath(); e.fill()
+                                }
+                            } function E(d) { d = d ? d : window.event; q = d.clientX - m.offsetLeft - n.offsetLeft; r = d.clientY - m.offsetTop - n.offsetTop } function F() { w = !0; return !1 } function G() { return w = !1 } function H() {
+                                this.color = "rgb(" + Math.floor(255 * Math.random()) + "," + Math.floor(255 *
+                                    Math.random()) + "," + Math.floor(255 * Math.random()) + ")"; this.b = this.a = this.x = this.y = 0; this.size = 1
+                            } var D = 2 * Math.PI, f = 1E3, p = 560, z = 600, B = 0.96, A = [], o, e, n, m, q, r, x, y, u, v, w; window.onload = function () {/*try{var nlng=navigator.language||navigator.userLanguage;var lng=nlng.substr(0, 2).toLowerCase();if(lng=="ru"||lng=="uk"||lng=="be")document.getElementById("flw").innerHTML=': <a href="http://www.twitter.com/spielzeugz" target="_blank">Twitter</a> / <a href="http://plus.google.com/116743952899287181520" target="_blank">G+</a> / <a href="http://vk.com/id266298870">VK</a>';}catch(e){}*/
+                                o = document.getElementById("mainCanvas"); if (o.getContext) {
+                                    m = document.getElementById("outer"); n = document.getElementById("canvasContainer"); e = o.getContext("2d"); for (var d = z; d--;) { var l = new H; l.x = 0.5 * f; l.y = 0.5 * p; l.a = 34 * Math.cos(d) * Math.random(); l.b = 34 * Math.sin(d) * Math.random(); A[d] = l } q = u = 0.5 * f; r = v = 0.5 * p; document.onmousedown =
+                                        F; document.onmouseup = G; document.onmousemove = E; setInterval(C, 33);
+                                } else document.getElementById("output").innerHTML = "Sorry, needs a recent version of Chrome, Firefox, Opera, Safari, or Internet Explorer 9."
+                            }
+                        })();
+                    </script>
+
+                    <div id="outer">
+                        <div id="canvasContainer">
+                            <canvas id="mainCanvas" width="1000" height="560"></canvas>
+                        </div>
+                    </div>
+                </section>
+
+
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Projects Javascript -->
+    <div id="experiment">
+        <div id="cube">
+            <div class="face two">
+                <a href="https://codesandbox.io/s/array-practice-6gw93">
+                    <img class="jsprojects" src="./assets/array.PNG" alt="">
+                </a>
+
+                <a href="https://codesandbox.io/s/palindrome-vui6s">
+                    <img class="jsprojects" src="./assets/pdrome.PNG" alt="">
+                </a>
+
+            </div>
+            <div class="face three">
+                <a href="https://codesandbox.io/s/calculator-app-nfqbo">
+                    <img class="jsprojects" src="./assets/calculator.PNG" alt="">
+                </a>
+                <a href="https://codesandbox.io/s/sign-up-page-ksirt">
+                    <img class="jsprojects" src="./assets/signup.PNG" alt="">
+                </a>
+            </div>
+            <div class="face four">
+                <div class="waveWrapper waveAnimation">
+                    <div class="waveWrapperInner bgTop">
+                        <div class="wave waveTop"
+                            style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')">
+                        </div>
+                    </div>
+                    <div class="waveWrapperInner bgMiddle">
+                        <div class="wave waveMiddle"
+                            style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')">
+                        </div>
+                    </div>
+                    <div class="waveWrapperInner bgBottom">
+                        <div class="wave waveBottom"
+                            style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="face five">
+                <a href="https://codesandbox.io/s/object-checker-pgxdq">
+                    <img class="jsprojects" src="./assets/objchecker.PNG" alt="">
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Projects Python -->
+    <div id="experiment2">
+        <div id="cube2">
+            <div class="face2 one2">
+                <a href="https://oepokedodge.firebaseapp.com/">
+                    <img src="gliscor_sprite.png" alt="">
+                </a>
+            </div>
+            <div class="face2 two2">
+                <div style="height: 50%; width: 50%;">
+                    <h1>ABOUT ME</h1>
+                    <img src="./assets/pjimage.jpg" alt="" style="height: 300px; width: 300px;">
+                    <p>My name is Owen Edwards and I am an aspiring video game designer. I have a passion for working on
+                        projects that involve both front-end and back-end development</p>
+                    <button class="download_btn"
+                        href="https://docs.google.com/document/d/1Yls1oxY-UAqNIHMyC7b8efqQdDF8UaEOiSt30xBwBPA/edit?usp=sharing"
+                        target="_blank">Open Resume</button>
+                </div>
+            </div>
+            <div class="face2 four2">
+                <p>This is a test!</p>
+            </div>
+            <div class="face2 six2">
+                <p>This is a test!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+
+
+    <!-- Footer -->
+
+    <p></p>
+
+    <!-- Scripts -->
+    <script src="./js/cube.js"></script>
+    <script src="./js/aboutme.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+</body>
+
+</html>
